@@ -1,0 +1,11 @@
+services:
+  joda-agent:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env
+    volumes:
+      - joda-data:/app/data
+
+volumes:
+  joda-data:
